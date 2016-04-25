@@ -10,7 +10,7 @@ To add reactivity to your Speedment project, simply add the following dependency
 <dependency>
     <groupId>com.github.pyknic</groupId>
     <artifactId>reactor</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </dependency>
 ```
 
