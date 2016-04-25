@@ -21,10 +21,12 @@ final MaterializedView<ArticleEvent> articlesView
     = new MaterializedView<>(ArticleEvent.ARTICLE_ID);
 
 final Reactor<ArticleEvent> reactor = 
-    Reactor.builder(speedment.managerOf(ArticleEvent.class))
+    Reactor.builder(speedment.managerOf(ArticleEvent.class), ArticleEvent.ARTICLE_ID)
         .withListener(articlesView)
         .build(); // Automatically starts the reactor
 ```
+A materialized view must always have a particular field that events should be merged on. This is different than the primary key. Rows that have the same value of this field, in this case `ARTICLE_ID`, will be considered the same entity and will be merged in the view.
+
 
 ## License
 This project is made available under [the Apache 2 license](http://www.apache.org/licenses/LICENSE-2.0).
