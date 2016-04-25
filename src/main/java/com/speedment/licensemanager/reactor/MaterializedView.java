@@ -38,9 +38,12 @@ import java.util.stream.Stream;
  *          = new MaterializedView&lt;&gt;(ArticleEvent.ARTICLE_ID);
  * 
  *      final Reactor&lt;ArticleEvent&gt; reactor = 
- *          Reactor.builder(speedment.managerOf(ArticleEvent.class))
- *              .withListener(articlesView)
- *              .build(); // Automatically starts the reactor
+ *          Reactor.builder(
+ *                  speedment.managerOf(ArticleEvent.class),
+ *                  ArticleEvent.ARTICLE_ID
+ *          ).withListener(articlesView).build();
+ * 
+ *      // The reactor is automatically started.
  * </code>
  * 
  * @author          Emil Forslund
