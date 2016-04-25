@@ -34,7 +34,7 @@ import java.util.stream.Stream;
  * <p>
  * <b>Example usage:</b>
  * <code>
- *      final MaterializedView%lt;ArticleEvent&gt; articlesView 
+ *      final MaterializedView&lt;ArticleEvent&gt; articlesView 
  *          = new MaterializedView&lt;&gt;(ArticleEvent.ARTICLE_ID);
  * 
  *      final Reactor%lt;ArticleEvent&gt; reactor = 
