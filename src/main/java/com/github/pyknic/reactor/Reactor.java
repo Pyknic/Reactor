@@ -14,7 +14,7 @@
  * License for the specific language governing permissions and limitations under
  * the License.
  */
-package com.speedment.licensemanager.reactor;
+package com.github.pyknic.reactor;
 
 import com.speedment.field.ComparableField;
 import com.speedment.internal.logging.Logger;
